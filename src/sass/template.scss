@@ -1,0 +1,548 @@
+
+@import "components";
+
+
+
+/* ---------- 6 - template --------- */
+header {     
+  padding:0 4%;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  background:transparent;
+  height:105px; height:10.23391812865497vh;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  > div{
+    
+  display:inline-block;     
+  vertical-align: middle;
+
+  }
+
+  &.fixo{ 
+    position:fixed;
+   
+  }
+  &.black{ 
+    opacity:0.9;
+    background:#000;
+  }
+  &.header-300{ 
+    top:-400px;
+  }
+  &.header-400{ 
+    top:0;
+  }
+  /*&.header-700{ 
+    opacity:0.6;
+  }
+  &.header-1000{ 
+    opacity:1;
+  }*/
+}
+
+header .logo{
+  float:left;
+  img{
+    max-width:8%;
+    max-width:8.565459610027855vw;
+  }
+}
+header .menu-topo{
+  img{
+    max-width:2.8551532033426184vw;
+    cursor:pointer;
+  }
+}
+header .menu-topo .sanduiche{ 
+  margin-top:16px;
+  cursor: pointer;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index:1010;
+}
+
+header .menu-topo  .menu-box{
+  width:294px;
+  position: absolute;
+  top:-20px;
+  right:0;
+  background:#fff url('../images/bg-menu-box.jpg') 0 0 no-repeat; background-size:cover;
+  padding:90px 38px 50px 38px;
+  text-align:left;
+  z-index:1000;
+  display:none;
+}
+
+header .menu-topo  .menu-box .fechar,
+header .menu-topo  .menu-box .idioma,
+header .menu-topo  .menu-box nav,
+header .menu-topo  .menu-box form,
+header .menu-topo  .menu-box .contact{   
+  width:100%;
+  float:left;
+}
+header .menu-topo  .menu-box .fechar {  
+  
+}
+
+header .menu-topo  .menu-box .idioma a,
+header .menu-topo  .menu-box .idioma span{
+  float:left;
+  width:45px;
+  display:inline-block;
+  text-transform:uppercase;
+  font-family: 'Museo Slab 300'; font-size:20px;
+  cursor:pointer;
+  color:#000;
+}
+header .menu-topo  .menu-box .idioma .active span,
+header .menu-topo  .menu-box .idioma span.active a,
+header .menu-topo  .menu-box .idioma span.active{
+  font-family: 'Museo Slab 700'; font-weight:bold;
+}
+header .menu-topo  .menu-box nav{  
+  margin-top:10px;
+}
+
+#searchsubmit{
+  display:none;
+}
+
+header .menu-topo  .menu-box nav li.page-item-240{  
+  display:none;
+}
+
+header .menu-topo  .menu-box nav a{  
+  float:left;
+  width:100%;
+  display:inline-block;
+  font-size:22px; font-family: 'Museo Slab 700'; 
+  line-height:35px;
+  color:$txtPreto;
+}
+header .menu-topo  .menu-box nav a:hover{  
+  text-decoration:underline;
+}
+header .menu-topo  .menu-box form{  
+  border-bottom:3px solid #000;
+  margin-top:10px;
+  padding-bottom:4px;
+  > div label{
+    display:none;
+  }
+}
+header .menu-topo  .menu-box form .icone{  
+  width:23px;
+  height:23px;
+  background:  url('../images/icons/icone-lupa.png') 0 0 no-repeat;
+  float:left;
+}
+header .menu-topo  .menu-box form input{  
+  float:left;
+  display:inline-block;  
+  width:190px;
+  margin-top:-4px;
+  border:0;
+}
+header .menu-topo  .menu-box form input:focus{  
+  background:#fff;
+  color:#000;
+}
+/* menu fechar */
+.o-grid__item {
+  padding: 0;
+  float:right;
+}
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 66px;
+  height: 56px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+ 
+}
+
+.widget.qtranxs_widget h2{
+  display:none;
+}
+
+
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  right: 18px;
+  height: 6px;
+  background: #fff;
+   -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #fff;
+  content: "";
+    -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.c-hamburger span::before {
+  top: -12px;
+}
+
+.c-hamburger span::after {
+  bottom: -12px;
+}
+.c-hamburger--htx {
+  background:transparent;
+}
+
+.c-hamburger--htx span {
+  -webkit-transition: background 0s 0.3s;
+          transition: background 0s 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  background:transparent;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background:#000;
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+  background:#000;
+}
+  
+header .menu-topo  .menu-box .contact{    
+  margin-top:5px;
+}
+  
+header .menu-topo  .menu-box .contact p,
+header .menu-topo  .menu-box .contact p a{   
+  margin-top:5px;
+  font-size:14px; font-family: 'Museo Slab 500';
+  color:#b4b4b4;
+  
+}
+
+header .menu-topo  .menu-box .contact p strong{   
+  color:#000;
+  font-size:16px; font-weight:normal;
+  font-family: 'Museo Slab 700';
+}
+.general{
+  float:left;
+  width:100%;
+  min-height:300px ;
+}
+main{  
+  width:100%;
+  float:left;
+  display:none;
+  
+  }
+.loading-page{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff url('../images/loading-page.gif') 50% 260px no-repeat;
+  z-index:9999;
+  opacity:0.4;
+}
+
+/*
+footer{ 
+  width:100%;
+  float:left;
+  background:#000;
+  padding:70px 0 ;
+  text-align:center;
+  color:#fff;
+}
+
+footer .logo{ 
+  width:100%;
+  float:left;
+  margin-bottom:35px;
+}
+footer .redes-sociais{ 
+  width:100%;
+  float:left;
+  margin-bottom:25px;
+}
+footer .redes-sociais a{    
+  display:inline-block;
+  width:22px;
+  height:22px;
+  background: url('../images/icons/redes-sociais.png') no-repeat 0 0;
+  margin:0 10px;
+  opacity:0.8;
+}
+
+footer .redes-sociais .facebook{    
+  background-position:0 -22px;
+}
+
+footer .redes-sociais .linkedin{    
+  background-position:0 -44px;
+}
+footer .redes-sociais .instagram{    
+  background-position:0 -66px;
+}
+footer .redes-sociais a:hover{    
+
+  opacity:1;
+}
+footer .sobre{ 
+  width:100%;
+  float:left;
+}
+
+footer .sobre p{ 
+  color:#4b4b4b;
+  font-family: 'Museo Slab 700'; font-size:13px;
+}
+*/
+
+.us-footer{ 
+ 
+  width:100%;
+  background:#222222;
+  float:left;
+  .menu-inner{    
+    position: relative;
+    background: #222222 url('../images/bg-footer.png') 50% 0 no-repeat;
+    background-size:cover;
+  }
+
+  .top{   
+   
+    float:left;
+ 
+    }
+  }
+
+
+  
+  /*padding-top:77px; padding-top:9%; padding-top:7.504873294346979vh;*/
+  .menu-header{ 
+    padding:0 76px; padding: 0 5% ; padding:0 5.2924791086350975vw;
+    /*padding-bottom:78px; padding-bottom:9%; padding-bottom:7.60233918128655vh;*/
+    border-bottom:1px solid #cfcfcf;
+    height:270px; height:26.31578947368421vh;
+    line-height:270px; line-height:26.31578947368421vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    top:0;
+    margin-top:0;
+    float:left;
+    > div{
+      display:inline-block;
+      top:0;
+      vertical-align: middle;
+    }
+    .col-left{
+      width:20%;
+      float:left;
+    }
+    .col-right{
+      float:right;
+      text-align:right;
+      width:80%;height:120px;  height:11.695906432748538vh;
+      position:relative;
+      .menu-mobile{
+        background:#000;        
+        width:120px; width:8%; width:8.356545961002785vw;
+        height:120px;  height:11.695906432748538vh;
+        line-height:120px; line-height:11.695906432748538vh;
+        display:inline-block;
+        text-align:center;
+        top:0;
+        right:0;
+        position: absolute;
+        span{
+          color:#fff;
+          font-size:77px; font-size:5.362116991643454vw; font-family: 'Museo Slab 700';
+          cursor:pointer;
+        }
+      }
+    }
+  }
+  .menu-body{
+   
+    padding:134px 4%;
+    /* height:554px; height:53.99610136452242vh;  */
+    .col{                              
+      float:left;
+      /*height:554px; height:53.99610136452242vh;*/
+      &.col-left{
+        width:30%;       
+        /*padding-top:46px; padding-top:5%; padding-top:4.483430799220273vh;*/
+        .endereco{
+          text-align:left;
+          height:272px; height:32.510721247563353vh;
+          h3{
+            display:block;
+            color:#fff;
+            font-family: 'Ubuntu';
+            font-weight:700;
+            font-size:34px; font-size:3.313840155945419vh;
+            margin-top:0;
+            padding-top:0;
+          }
+          p{
+            display:block;
+            color:#fff;
+            font-family: 'Ubuntu';
+            font-weight:300;
+            font-size:26px; font-size:2.53411306042885vh;
+          }
+        }
+      }
+      &.col-right{
+        width:70%;
+      
+       /* padding-top:43px; padding-top:5%; padding-top:4.1910331384015596vh;*/
+        .main-menu{  
+          text-align:right;
+          /*height:554px; height:53.99610136452242vh;*/
+          a{
+            width:100%;
+            float:left;
+            display:block;
+            font-size:77px; font-size:7.504873294346979vh; font-family: 'MuseoSlab-900';
+            line-height:80px; line-height:8.797270955165692vh;
+            color:#fff;
+            &:hover{
+              color:$txtDourado;
+            };
+          }
+        }
+      }
+    }
+  }
+  .menu-footer{
+    background:#fff;
+    height:202px; height:19.68810916179337vh;
+    float:left;
+   
+
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:0 76px; padding:0 5%; padding:0  5.2924791086350975vw;
+
+      > div{
+        display:inline-block;
+        h6{
+          display:block;
+          color:#000;
+          font-size:26px; 
+          font-weight:700;
+          line-height:26px;
+          text-transform:uppercase;
+        }
+        a{
+          display:block;
+          color:#000;
+          font-size:26px; font-size:2.53411306042885vh;
+          font-weight:300;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+         h5{
+          display:block;
+          color:#000;
+          font-size:36px; font-size:3.508771929824561vh;
+          font-weight:700;
+        
+          span{
+            font-size:26px; font-size:2.53411306042885vh;
+            font-weight:300;
+          }
+        }
+      }
+
+
+
+
+}
+
+
+
+/* ---------- template --------- */
